@@ -1,13 +1,13 @@
-docker run redis:4.0   #:4.0 is a tag to identify teh version without teh tag the latest is assumed
-
+docker run redis:4.0   #:4.0 is a tag to identify the version without the tag the latest is assumed
+docker run -d ubuntu #(run in dtatched mode aka runs in the background)
+docker attach (instance name) #to get back to the console
 docker run -i  #(interactive mode)
 docker run -it #(interactive terminal)
 
 docker run -p 80:500 (map to host port internal)
-
-*docker inspect* (container id) to get more detail
-
-
+docker run timer (displays timer)
+docker ps
+docker inspect (container id) #to get more detail like IP etc
 
 stop all containers:
 docker kill $(docker ps -q)
@@ -18,4 +18,8 @@ docker rm $(docker ps -a -q)
 remove all docker images
 docker rmi $(docker images -q)
 
+docker build Dockerfile -t (where the docker file is)
+docker history (image name) #see more details and dependencies
+docker build Dockerfile -t (where teh docker file is)
+docker build -t webapp-color:lite .
 
