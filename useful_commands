@@ -1,3 +1,14 @@
+docker run redis:4.0   #:4.0 is a tag to identify teh version without teh tag the latest is assumed
+
+docker run -i  #(interactive mode)
+docker run -it #(interactive terminal)
+
+docker run -p 80:500 (map to host port internal)
+
+*docker inspect* (container id) to get more detail
+
+
+
 stop all containers:
 docker kill $(docker ps -q)
 
@@ -6,3 +17,5 @@ docker rm $(docker ps -a -q)
 
 remove all docker images
 docker rmi $(docker images -q)
+
+
