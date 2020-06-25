@@ -28,3 +28,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-
 #give perpissions
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
+#uninstall 
+sudo rm /usr/local/bin/docker-compose
+
+
