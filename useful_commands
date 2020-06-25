@@ -9,13 +9,13 @@ docker run timer (displays timer)
 docker ps
 docker inspect (container id) #to get more detail like IP etc
 
-stop all containers:
+#stop all containers:
 docker kill $(docker ps -q)
 
-remove all containers
+#remove all containers
 docker rm $(docker ps -a -q)
 
-remove all docker images
+#remove all docker images
 docker rmi $(docker images -q)
 
 docker build Dockerfile -t (where the docker file is)
@@ -23,3 +23,8 @@ docker history (image name) #see more details and dependencies
 docker build Dockerfile -t (where teh docker file is)
 docker build -t webapp-color:lite .
 
+#install docker compose:
+sudo curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+#give perpissions
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
